@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+.jumbotron {
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+p {
+    margin: 35px;
+    padding-bottom: 50px;
+    text-align: justify;
+}
