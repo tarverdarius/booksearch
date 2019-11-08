@@ -31,9 +31,10 @@ class Search extends React.Component {
 
     saveBook = data => {
         // This data is being passed in from BooksContainer.js props (all props) when the save button is clicked.
-        // console.log(data)
+        console.log(data)
         // The data then gets passed into API save function where it comes in as bookData and gets passed
         // into a mongoose schema via axios.
+        console.log('saving')
         API.save({
             title: data.title,
             author: data.author,
@@ -42,10 +43,11 @@ class Search extends React.Component {
             img: data.img
         })
             .then(res => {
-                console.log(res.data.config)
+                console.log(res.data)
                 if (res.data.status === "error") {
                     throw new Error(res.data.message);
                 }
+                res.status(200);
                 console.log("what now?")
                 console.log(res.data.config)
             })

@@ -17,6 +17,7 @@ class SavedBooks extends React.Component {
 
     componentDidMount() {
         this.loadBooks();
+        console.log("loading")
     }
 
     loadBooks = () => {
